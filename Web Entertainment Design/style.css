@@ -1,0 +1,353 @@
+/* PC用(1000pxまで) */
+/* 全体的な設定 */
+body {
+  font-family: 'Hiragino Kaku Gothic ProN', 'Arial Narrow', Arial, sans-serif;
+  font-size: 14.4px;
+  color: #000000;
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  background-color: #f0f0f0;
+  line-height: 1.9rem;
+}
+h2 {
+  font-size: 36px;
+  letter-spacing: 12px;
+  font-weight: lighter;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+h6 {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+h6::before {
+  content: "―　";
+}
+.title-ja {
+  margin: 0;
+}
+.line {
+  margin: 0 0 34px 0;
+  width: 50px;
+  border-bottom: 1px solid #000000;
+}
+.logo {
+  height: 25.6px;
+  width: 100px;
+}
+
+/* ヘッダー */
+header {
+  width: 100vw;
+  height: 80px;
+  display: flex;
+  position: relative;
+}
+header > .logo {
+  position: absolute;
+    left: 8%;
+    top: calc(50% - 12.8px);
+}
+#anchor {
+  display: flex;
+  height: 50px;
+  align-items: center;
+  position: absolute;
+    left: 23%;
+    top: calc(50% - 25px);
+}
+#anchor > a {
+  text-decoration: none;
+  color: #000000;
+  margin-right: 30px;
+}
+#contact {
+  position: absolute;
+    right: 0;
+  background-color: #000000;
+  height: 100%;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#contact > a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* メインビジュアル */
+#mainvisual {
+  width: 100vw;
+  height: calc(100vh - 80px);
+  object-fit: cover;
+}
+
+/* NEWS */
+#news {
+  margin: 120px auto 0 auto;
+  width: 95%;
+}
+#news-contents {
+  margin-top: 60px;
+  display: flex;
+  justify-content: space-between;
+}
+.news-content {
+  width: 30%;
+  margin-right: 5px;
+}
+.news-content:nth-last-of-type(n + 2) {
+  border-right: 1px solid #000000;
+}
+.news-content > p {
+  margin-top: 16px;
+  margin-right: 10px;
+  margin-bottom: 0;
+}
+.span {
+  display: inline-block;
+  padding: 0 2%;
+  margin-left: 10px;
+  background-color: #000000;
+  font-size: 12px;
+  color: #fff;
+}
+
+/* ABOUT */
+#about {
+  width: 100vw;
+  margin-top: 120px;
+  display: flex;
+  justify-content: space-between;
+}
+#about-img {
+  width: 50%;
+  height: 400px;
+  object-fit: cover;
+}
+#about-right {
+  margin: 30px 5%;
+  width: 40%;
+  position: relative;
+  top: 150px;
+}
+#about-right-content {
+  margin-top: 50px;
+}
+
+/* BUSINESS */
+#business {
+  margin: 240px auto 0 auto;
+  width: 95%;
+}
+#parent-column {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-evenly;
+}
+#right-column {
+  width: 38%;
+}
+#left-column {
+  width: 38%;
+  position: relative;
+  top: 100px;
+}
+.business-img {
+  width: 100%;
+  height: 232px;
+  object-fit: cover;
+}
+
+/* COMPANY */
+#company {
+  margin-top: 220px;
+  width: 95%;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+#company-content {
+  background-color: #fff;
+  width: 43%;
+  padding: 100px 15% 100px 5%;
+  position: relative;
+  z-index: 1;
+}
+.title {
+  vertical-align: top;
+}
+.title::after {
+  content: "　　";
+}
+#company-img {
+  display: inline-block;
+  width: 60%;
+  height: 400px;
+  object-fit: cover;
+  position: absolute;
+  z-index: 2;
+  right: -10%;
+}
+
+/* フッター */
+footer {
+  width: 100vw;
+  background-color: #fff;
+  margin-top: 128px;
+}
+#upper {
+  position: relative;
+  top: 40px;
+  max-width: 1000px;
+  margin: 0 auto 40px auto;
+  padding: 0 2.5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#bottom {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 2.5%;
+}
+
+/* ********************************************************************** */
+/* PC用（1000px以上） */
+@media screen and (min-width: 1000px) {
+  /* 左端合わせ */
+  header {
+    left: calc((1000px - 100vw)/2);
+  }
+  #mainvisual  {
+    position: relative;
+    left: calc((1000px - 100vw)/2);
+  }
+  #about {
+    position: relative;
+    left: calc((1000px - 100vw)/2);
+  }
+  footer {
+    position: relative;
+    left: calc((1000px - 100vw)/2);
+  }
+}
+
+/* ********************************************************************** */
+/* 一説では最適ブレイクポイントは600pxと834px */
+/* タブレット用（900pxまで） */
+@media screen and (max-width: 900px) {
+  /* ヘッダーを二段構造にする */
+  header {
+    display: block;
+    padding: 2.5% 0 0 0;
+  }
+  header > .logo {
+    position: relative;
+    left: 2.5%;
+    top: 0;
+  }
+  #anchor {
+    position: relative;
+    left: 2.5%;
+    top: 0;
+    width: 100%;
+    justify-content: space-evenly;
+  } 
+
+  /* 「お問い合わせ」を消す */
+  #contact {
+    display: none;
+  }
+}
+
+/* ********************************************************************** */
+/* スマホ用（600pxまで） */
+@media screen and (max-width: 600px) {
+  /* NEWSを１列に */
+  #news {
+    width: 90%;
+  }
+  #news-contents {
+    margin-top: 60px;
+    display: block;
+  }
+  .news-content {
+    width: 100%;
+    margin: 40px 0;
+  }
+  .news-content:nth-last-of-type(n + 2) {
+    border: none;
+  }
+  
+  /* ABOUTを１列に */
+  #about {
+    width: 100vw;
+    margin-top: 120px;
+    display: block;
+  }
+  #about-img {
+    width: 100%;
+    height: 300px;
+  }
+  #about-right {
+    margin: 30px 5%;
+    width: 90%;
+    position: relative;
+    top: 0;
+  }
+  
+  /* BUSINESSを１列に */
+  #business {
+    margin: 80px auto 0 auto;
+  }
+  #parent-column {
+    margin-top: 0;
+    display: block;
+  }
+  #right-column {
+    width: 100%;
+  }
+  #left-column {
+    width: 100%;
+    top: 0;
+  }
+  
+  /* COMPANYを１列に */
+  #company {
+    margin: 80px auto 0 auto;
+    display: block;
+  }
+  #company-content {
+    width: 90%;
+    display: block;
+    padding: 40px 5%;
+  }
+  .title {
+    vertical-align: top;
+  }
+  #company-img {
+    margin: 20px 0 0 0;
+    display: block;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    right: 0;
+  }
+  
+  /* footerを１列に */
+  footer {
+    margin-top: 0;
+    padding-bottom: 20px;
+  }
+  #upper {
+    top: 0;
+    padding: 48px 2.5% 0 2.5%;
+    display: block;
+  }
+  #upper > .logo {
+    display: block;
+  }
+}
